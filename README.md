@@ -13,4 +13,4 @@ Que tipos de gráficos podem ser gerados?
 Podem ser gerados 6 gráficos, onde esses são: Comparação 1 com todos (numero de aparições), Comparação 1 com 1 (numero de aparições), Comparação 1 com todos (ano de entrada), Comparação 1 com 1 (ano de entrada), Comparação 1 com todos (anos desde o ingresso), Comparação 1 com 1 (anos de ingresso nos Vingadores)
 
 Nome dos integrantes do projeto:
-Arthur e Lucas
+Arthur Phelipe Mayer Santos e Lucas Gabriel de Moraes Carvalho
