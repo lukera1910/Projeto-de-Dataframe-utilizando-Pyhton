@@ -16,10 +16,3 @@ def ler_arquivo():
 
     df = pd.read_csv('avengers.csv', encoding='latin1')
     return df
-
-# Esta função aceita uma mensagem msg como entrada, que é uma mensagem solicitando ao usuário que digite um nome.
-def nome_input(msg):
-    # A função converte o nome em formato capitalizado (a primeira letra de cada palavra em maiúscula) e retorna o resultado. 
-    # Isso é útil para garantir que os nomes estejam em um formato consistente.
-    return msg.capitalize()
-        
