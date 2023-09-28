@@ -7,6 +7,7 @@ def menu():
     4- Comparação 1 com 1 (ano de entrada)
     5- Comparação 1 com todos (anos desde o ingresso)
     6- Comparação 1 com 1 (anos de ingresso nos Vingadores)
+    0- Voltar
     ''')
 
 # Esta função lida com a leitura de um arquivo CSV chamado 'avengers.csv' usando a biblioteca pandas. 
