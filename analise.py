@@ -10,24 +10,24 @@ import funcoes as fct
 
 # Isso chama a função ler_arquivo() do módulo funcoes e atribui o resultado a df.
 df = fct.ler_arquivo()
+while True:
+    # Isso solicita ao usuário que digite o nome de um personagem desejado e armazena a entrada na variável personagem_desejado.
+    personagem_desejado = input("Digite o nome do personagem que deseja pesquisar: ")
+    # Isso cria um novo DataFrame personagem_filtrado que contém apenas as linhas onde a coluna 'Nome/Herói' é igual ao nome do personagem desejado.
+    personagem_filtrado = df[df['Nome/Herói'] == personagem_desejado]
 
-# Isso solicita ao usuário que digite o nome de um personagem desejado e armazena a entrada na variável personagem_desejado.
-personagem_desejado = fct.nome_input(input("Digite o nome do personagem que deseja pesquisar: "))
-# Isso cria um novo DataFrame personagem_filtrado que contém apenas as linhas onde a coluna 'Nome/Herói' é igual ao nome do personagem desejado.
-personagem_filtrado = df[df['Nome/Herói'] == personagem_desejado]
+    # Isso chama a função ficha_completa() da classe InfoPersonagem com o nome do personagem e o DataFrame filtrado como argumentos.
+    ip.ficha_completa(personagem_desejado, personagem_filtrado)
 
-# Isso chama a função ficha_completa() da classe InfoPersonagem com o nome do personagem e o DataFrame filtrado como argumentos.
-ip.ficha_completa(personagem_desejado, personagem_filtrado)
+    # Isso chama a função menu() do módulo funcoes.
+    fct.menu()
 
-# Isso chama a função menu() do módulo funcoes.
-fct.menu()
+    # Isso solicita ao usuário que escolha uma opção de gráfico e armazena a escolha como um número inteiro na variável opc.
+    opc = int(input("Qual opção de gráficos você deseja ver: "))
 
-# Isso solicita ao usuário que escolha uma opção de gráfico e armazena a escolha como um número inteiro na variável opc.
-opc = int(input("Qual opção de gráficos você deseja ver: "))
+    # Há um loop while que continua até que o usuário escolha a opção 0 (provavelmente para sair do programa). 
+    # Dentro do loop, o código verifica a escolha do usuário e chama funções relacionadas a gráficos com base na opção selecionada. 
 
-# Há um loop while que continua até que o usuário escolha a opção 0 (provavelmente para sair do programa). 
-# Dentro do loop, o código verifica a escolha do usuário e chama funções relacionadas a gráficos com base na opção selecionada. 
-while opc != 0:
     if not personagem_filtrado.empty:
         if opc == 1:
             #opção 1 mostrará o grafico de comparação do numero de aparições do personagem escolhido com o total de aparições de todos os personagens
@@ -47,6 +47,8 @@ while opc != 0:
         elif opc == 6:
             #opção 6 mostra um gráfico comparando os anos de ingresso de dois determinados heróis
             grf.grafico_ingresso_1_para_1(personagem_desejado, personagem_filtrado)
+        else:
+            break
     else:
         print(f"{personagem_desejado} não foi encontrado")
-print('Obrigado por utilizar!!')
+    print('Obrigado por utilizar!!')
